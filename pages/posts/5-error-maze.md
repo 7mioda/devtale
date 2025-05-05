@@ -10,7 +10,7 @@ author: You
 
 Errors can be painful. Confusing. Frustrating. But they can also be a weirdly great place to learn — if you don't let them break your spirit.
 
-> "Success is the ability to go from failure to failure without losing your enthusiasm."
+> Success is the ability to go from failure to failure without losing your enthusiasm.
 — Winston Churchill
 > 
 
@@ -66,7 +66,7 @@ a little **Interstellar-style ping** to your future self stuck in production hel
 
 Next time you're in a try/catch, ask yourself:
 
-> "Will this help someone fix the problem… or will it ruin their day?"
+> Will this help someone fix the problem… or will it ruin their day?
 > 
 
 That someone might be you.
