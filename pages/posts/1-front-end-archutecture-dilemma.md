@@ -10,9 +10,9 @@ author: You
 
 The journey started five years ago when our CTO pushed the very first commit to our frontend app. Back then, **React + TypeScript** (with Create React App) was the obvious go-to stack. With the hype surrounding **GraphQL**, adopting it felt like a prestigious and natural choice.
 
-But, like many early-stage startups, we moved fast — maybe too fast. Our codebase quickly devolved into a **big ball of mud**. Every component, style, and type became deeply coupled to another part of the app. Bugs were hard to trace, and refactoring felt like going in circles. We weren't moving forward — we were treading water in ambiguity.
+But, like many early-stage startups, we moved fast, maybe too fast. Our codebase quickly devolved into a **big ball of mud**. Every component, style, and type became deeply coupled to another part of the app. Bugs were hard to trace, and refactoring felt like going in circles. We weren't moving forward; we were treading water in ambiguity.
 
-Eventually, we hit a tipping point. We had to find a better way — not just for maintainability, but to keep our sanity intact.
+Eventually, we hit a tipping point. We had to find a better way, not just for maintainability, but to keep our sanity intact.
 
 Two architectural ideas emerged:
 
@@ -21,7 +21,7 @@ Two architectural ideas emerged:
 
 ## **Centralized Orchestration (The Widget + Context Pattern)**
 
-The first solution was to create **feature widgets** — each wrapped in its own **React Context**. This context would be responsible for:
+The first solution was to create **feature widgets**, each wrapped in its own **React Context**. This context would be responsible for:
 
 - Fetching initial data
 - Exposing all available actions (e.g., create, update, delete)
@@ -44,9 +44,9 @@ We decided:
 
 - Use **state and context only when absolutely necessary**.
 - **Push state down the React tree** as much as possible (minimizing unnecessary renders and improving performance).
-- Let each component **own its logic**: data fetching, mutations, side effects — all encapsulated within.
+- Let each component **own its logic**, with data fetching, mutations, and side effects all encapsulated within.
 
-Because we were using **Apollo Client**, many of our concerns around syncing data across components were already handled. Components connected to the same query would re-render automatically on mutation — no extra coupling needed.
+Because we were using **Apollo Client**, many of our concerns around syncing data across components were already handled. Components connected to the same query would re-render automatically on mutation, with no extra coupling needed.
 
 This approach wasn't just simpler. It was **more aligned with how React wants to be used**.
 
@@ -55,12 +55,12 @@ This approach wasn't just simpler. It was **more aligned with how React wants to
 - Don't architect for flexibility you don't yet need.
 - Contexts are powerful, but overuse can lead to **fragility**, not **scalability**.
 - Smaller, self-contained components are **easier to onboard**, **test**, and **scale**.
-- If you're using a smart data layer like Apollo or React Query, you already have a lot of shared-state magic — don't reinvent it.
+- If you're using a smart data layer like Apollo or React Query, you already have a lot of shared-state magic. Don't reinvent it.
 
 ## **Final Thoughts**
 
-There's no silver bullet. But when you're growing a team and building under pressure, **simplicity wins**. The vertical slice approach made our app easier to reason about and gave us confidence to build faster — without the fear of breaking everything.
+There's no silver bullet. But when you're growing a team and building under pressure, **simplicity wins**. The vertical slice approach made our app easier to reason about and gave us confidence to build faster without the fear of breaking everything.
 
 We're still learning, but we've come a long way from the mud. 🛠️
 
-This will be the first in a series of articles on our journey to build a better frontend — tomorrow, in Tomorro.
+This will be the first in a series of articles on our journey to build a better frontend. Tomorrow, in Tomorro.

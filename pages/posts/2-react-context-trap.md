@@ -1,5 +1,5 @@
 ---
-title: 😵‍💫 The React Context Trap — A Hard Lesson in Over-Engineering
+title: "😵‍💫 The React Context Trap: A Hard Lesson in Over-Engineering"
 date: 2025/3/12
 description: Understanding when and how to use React Context effectively.
 tag: web development
@@ -8,7 +8,7 @@ author: You
 
 # The React Context Trap
 
-As you get more experienced with React, you start to develop what I call the **"senior frontend dev eye"** (even if you're not technically a senior yet). You start spotting patterns, thinking about abstractions, and — sometimes — trying to optimize things that don't need optimizing.
+As you get more experienced with React, you start to develop what I call the **"senior frontend dev eye"** (even if you're not technically a senior yet). You start spotting patterns, thinking about abstractions, and sometimes trying to optimize things that don't need optimizing.
 
 That's how I, like many others, fell into the **React Context trap**.
 
@@ -16,7 +16,7 @@ That's how I, like many others, fell into the **React Context trap**.
 
 **Context feels like magic... until it isn't.**
 
-It starts simple: you're passing a few props down a long tree, and you think — *"Why prop-drill when I can use a context? Just one wrapper and boom, everything has access to the data they need."*
+It starts simple: you're passing a few props down a long tree, and you think, *"Why prop-drill when I can use a context? Just one wrapper and boom, everything has access to the data they need."*
 
 It feels clean. It feels smart. It feels like you've leveled up.
 
@@ -27,14 +27,14 @@ But fast-forward a few weeks or months, and you're drowning in it:
 - Dozens of context providers
 - Components consuming data from 3–4 different contexts
 - Components with **no props at all** but dozens of hidden dependencies
-- Moving a component becomes a mystery — you don't know what it needs to work anymore
+- Moving a component becomes a mystery because you don't know what it needs to work anymore
 - And then... 🧪 you try to test.
 
 ## The Root Problem
 
 **Context's biggest flaw? Convenience.**
 
-Because it's *so easy* to reach into a context, people will — even seasoned devs. Instead of passing a prop, they'll grab a slice of context data. And then another. And another.
+Because it's *so easy* to reach into a context, people will do it, even seasoned devs. Instead of passing a prop, they'll grab a slice of context data. And then another. And another.
 
 What you end up with is a component that's **tightly coupled to global state**, with zero indication of what it actually needs to function. No props. No signature. Just hidden dependencies all over the place.
 
@@ -42,7 +42,7 @@ And when you finally go to write tests? Surprise! You're now mocking **massive, 
 
 ## Lessons Learned
 
-**So here's what we learned — the hard way.**
+**So here's what we learned the hard way.**
 
 Modern React apps thrive on **simpler, more focused state**:
 
